@@ -1,5 +1,10 @@
-run = "python3 -m http.server 8080"
+modules = ["python-3.11", "web"]
+
 entrypoint = "index.html"
+run = "python3 -m http.server 8080 --bind 0.0.0.0"
+
+[nix]
+channel = "stable-24_05"
 
 [deployment]
 deploymentTarget = "static"
@@ -8,3 +13,18 @@ publicDir = "."
 [[ports]]
 localPort = 8080
 externalPort = 80
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 -m http.server 8080 --bind 0.0.0.0"
+
+[workflows.workflow.metadata]
+outputType = "webview"
