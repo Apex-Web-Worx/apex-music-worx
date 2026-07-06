@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Apex Music Worx — a professional music studio offering recording, mixing, mastering, and production services." />
+  <title>Apex Music Worx | Recording · Mixing · Mastering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav">
+      <a href="#top" class="brand">
+        <span class="brand-mark">▲</span>
+        <span class="brand-name">Apex<span class="brand-accent"> Music Worx</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact" class="nav-cta">Book a Session</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Professional Music Studio</p>
+        <h1>Where your sound<br />reaches its <span class="grad">Apex</span>.</h1>
+        <p class="lede">
+          Recording, mixing, mastering, and full production under one roof.
+          Bring your ideas — we'll make them sound like the records you love.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Book a Session</a>
+          <a href="#services" class="btn btn-ghost">Explore Services</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>500+</strong><span>Tracks Produced</span></div>
+          <div><strong>10+</strong><span>Years Experience</span></div>
+          <div><strong>24/7</strong><span>Studio Access</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-head">
+        <p class="eyebrow">What We Do</p>
+        <h2>Studio Services</h2>
+        <p class="section-sub">Everything you need to take a song from idea to release.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">🎙️</div>
+          <h3>Recording</h3>
+          <p>Pristine vocal and instrument tracking in an acoustically treated room with top-tier mics and preamps.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎚️</div>
+          <h3>Mixing</h3>
+          <p>Balanced, punchy, radio-ready mixes that let every element of your track breathe.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">💿</div>
+          <h3>Mastering</h3>
+          <p>The final polish — loud, clear, and consistent across every platform and speaker.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎛️</div>
+          <h3>Production</h3>
+          <p>Beats, arrangement, and full production to build your song from the ground up.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="eyebrow">About the Studio</p>
+          <h2>Built by artists, for artists.</h2>
+          <p>
+            Apex Music Worx is a creative home for musicians, rappers, podcasters, and
+            producers. Our space blends professional gear with a comfortable, no-pressure
+            vibe so you can focus on what matters — the music.
+          </p>
+          <p>
+            Whether you're cutting your first single or your tenth album, we treat every
+            project like it's headed for the top of the charts.
+          </p>
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+        <ul class="about-list">
+          <li><span>✓</span> Acoustically treated recording room</li>
+          <li><span>✓</span> Industry-standard gear &amp; plugins</li>
+          <li><span>✓</span> Experienced engineers</li>
+          <li><span>✓</span> Flexible hourly &amp; project rates</li>
+          <li><span>✓</span> Fast turnaround times</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head">
+        <p class="eyebrow">Our Work</p>
+        <h2>Recent Sessions</h2>
+        <p class="section-sub">A glimpse into the projects coming out of the studio.</p>
+      </div>
+      <div class="gallery">
+        <div class="tile tile-1"><span>Single · Hip-Hop</span></div>
+        <div class="tile tile-2"><span>EP · R&amp;B</span></div>
+        <div class="tile tile-3"><span>Album · Pop</span></div>
+        <div class="tile tile-4"><span>Podcast Series</span></div>
+        <div class="tile tile-5"><span>Vocal Comp</span></div>
+        <div class="tile tile-6"><span>Live Session</span></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-card">
+        <div class="contact-head">
+          <p class="eyebrow">Book a Session</p>
+          <h2>Let's make something great.</h2>
+          <p class="section-sub">Tell us about your project and we'll get back to you within 24 hours.</p>
+        </div>
+        <form class="contact-form" onsubmit="return handleSubmit(event)">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@email.com" />
+          </div>
+          <div class="field">
+            <label for="service">Service</label>
+            <select id="service" name="service">
+              <option>Recording</option>
+              <option>Mixing</option>
+              <option>Mastering</option>
+              <option>Production</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Request</button>
+          <p class="form-note" id="formNote" hidden>Thanks! This demo form doesn't send yet — we'll wire it up when the site is live.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="brand">
+        <span class="brand-mark">▲</span>
+        <span class="brand-name">Apex<span class="brand-accent"> Music Worx</span></span>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> Apex Music Worx. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
